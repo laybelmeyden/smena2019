@@ -36,7 +36,7 @@
 <section class="sec_poloj">
       <div class="poloj">
       <div class="pol_1">
-      <p class="pol_p">Итоги конкурсного отбора</p> 
+      <p class="pol_p">Итоги конкурсного отбора123</p> 
       </div>
       <div class="pol_2">
       <a target="_blank" class="btn_pol" href="https://vk.com/doc22052708_477185430?hash=09fa72090250579016&dl=559b249bff7486424b">Посмотреть</a> 
