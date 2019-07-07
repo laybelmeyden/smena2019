@@ -77,7 +77,7 @@ class MainController extends Controller
         $request -> app -> storeAs('public/upload', $filename);
 
 
-        $file -> app = $filename;
+       
 
         $file -> save ();
 
