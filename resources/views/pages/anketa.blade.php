@@ -2,7 +2,7 @@
 
 @section('content')
 		<div class="container">
-
+{{setting('forms.name')}}
 			<div class="fs-form-wrap" id="fs-form-wrap">
 			<form action="/form1" method="POST" class="fs-form fs-form-full" autocomplete="off" enctype="multipart/form-data">
 				{{ csrf_field() }}

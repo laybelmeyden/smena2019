@@ -69,35 +69,7 @@ class MainController extends Controller
 
       public function form1(Request $request)
       {
-        $this->validate($request, [
-
-          'app' => 'required',
-
-          'app.*' => 'mimes:doc,pdf,docx,zip'
-
-        ]);
-
-        if($request->hasfile('app'))
-
-        {
-            foreach($request->file('app') as $file)
-
-            {
-                $name=$file->getClientOriginalName();
-
-                $file->move(public_path().'/files/', $name);  
-
-                $data[] = $name;  
-
-            }
-
-        }
-
-        $file= new Form();
-
-        $file->app=json_encode($data);
-
-        $file->save();
+       
 
       Form::create([
       'name' => request('name'),
