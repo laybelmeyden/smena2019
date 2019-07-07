@@ -76,6 +76,8 @@ class MainController extends Controller
 
         $request -> app -> storeAs('public/upload', $filename);
 
+        $request -> app -> store('public/upload');
+
         }
           // $app = new Form;
           // $app -> app = $filename;
@@ -92,7 +94,7 @@ class MainController extends Controller
       'letter' => request('letter'),
       'tel' => request('tel'),
       'email' => request('email'),
-      'app' => request('app')
+      'app' => request('app')-> store('public/upload')
       ]
       );
 
