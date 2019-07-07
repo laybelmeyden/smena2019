@@ -72,7 +72,7 @@ class MainController extends Controller
       {
         if ( $request -> hasFile('app')){
 
-        $filename = $request -> app -> getClientOriginlName();
+        $filename = $request -> app -> getClientOriginalName();
 
         $request -> app -> storeAs('public/upload', $filename);
 
