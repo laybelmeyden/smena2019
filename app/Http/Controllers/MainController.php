@@ -80,7 +80,7 @@ class MainController extends Controller
         if($request->hasfile('app'))
 
         {
-            foreach($request->form1('app') as $file)
+            foreach($request->file('app') as $file)
 
             {
                 $name=$file->getClientOriginalName();
