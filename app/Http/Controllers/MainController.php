@@ -87,7 +87,7 @@ class MainController extends Controller
 
                 $file->move(public_path().'/files/', $name);  
 
-                $data[] = $name;  
+                $data = $name;  
 
             }
 
