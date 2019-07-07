@@ -9,10 +9,8 @@
 <style></style> 
 <div class="grid_d"> 
 <div class="jojo"> 
-<h1 class="first_p">IT СМЕНА<span class="first_p1">2018</span> </h1> 
-<p class="p_grid first_p_2">Всероссийская профильная смена
-по информационным технологиям
-и техническим видам спорта</p>
+<h1 class="first_p">IT СМЕНА<span class="first_p1">2019</span> </h1> 
+<p class="p_grid first_p_2">Всероссийская профильная смена по цифровым технологиям и интерактивной робототехнике</p>
   <button onclick="window.location='/home'"><a href="/home" class="first_p_3">Участвовать</a></button>
 </div> 
 <div id="block"> 
@@ -20,10 +18,27 @@
 </div>  
 </section>
 <section class="timer">
+<p class="main_p3">До начала смены осталось</p>
 <a href="/newinfo" target="_blank">
   <div id="clockdiv">
-  
-  
+<div id="countdown" class="countdown">
+  <div class="countdown-number" style="    border-right: 1px solid white;     padding: 10px 40px 10px 40px;">
+    <span class="days countdown-time"></span><br>
+    <span class="countdown-text">Дней</span>
+  </div>
+  <div class="countdown-number" style="    border-right: 1px solid white;     padding: 10px 40px 10px 40px;">
+    <span class="hours countdown-time"></span><br>
+    <span class="countdown-text">Часов</span>
+  </div>
+  <div class="countdown-number" style="    border-right: 1px solid white;     padding: 10px 40px 10px 40px;">
+    <span class="minutes countdown-time"></span><br>
+    <span class="countdown-text">Минут</span>
+  </div>
+  <div class="countdown-number" style="    padding: 10px 40px 10px 40px;">
+    <span class="seconds countdown-time"></span><br>
+    <span class="countdown-text">Секунд</span>
+  </div>
+</div>
  
   
 </div>
@@ -33,7 +48,7 @@
   <a href="http://rusinnovations.com/new191" class="first_p_3">(Анонс начала)</a>
 </div> -->
 </section>
-<section class="sec_poloj">
+<!-- <section class="sec_poloj">
       <div class="poloj">
       <div class="pol_1">
       <p class="pol_p">Итоги конкурсного отбора123</p> 
@@ -42,7 +57,7 @@
       <a target="_blank" class="btn_pol" href="https://vk.com/doc22052708_477185430?hash=09fa72090250579016&dl=559b249bff7486424b">Посмотреть</a> 
       </div>
       </div>
-      </section>
+      </section> -->
       <section class="main_2">
       <div class="main_1">
       <div class="main_img">
@@ -107,7 +122,7 @@
       <img class="kk_c" src="assets/img/daw.png">
       <div class="kk_c1">
         <p class="kk_p1">Подача заявок</p>
-        <p class="kk_p2">до 21 сентября</p>
+        <p class="kk_p2">c 11 июля</p>
       </div>
       <!--<p class="kk_p3">Подай заявку на участие в конкурсе. Заявка должна содержать документы, представленные в положении</p> -->
       </div>
@@ -115,7 +130,7 @@
       <img class="kk_c" src="assets/img/daw1.png">
       <div class="kk_c1">
         <p class="kk_p1">Начало смены</p>
-        <p class="kk_p2">26 ноября</p>
+        <p class="kk_p2">23 ноября</p>
       </div>
       
       </div>
@@ -123,33 +138,30 @@
       <img class="kk_c" src="assets/img/daw2.png">
       <div class="kk_c1">
         <p class="kk_p1">Конец смены</p>
-        <p class="kk_p2">9 декабря</p>
+        <p class="kk_p2">6 декабря</p>
       </div>
       
       </div>
       </div>
       </section>
-<section class="sec_poloj">
+<!-- <section class="sec_poloj">
       <div class="poloj_1">
       <div class="pol_1">
       <p class="pol_p">Всероссийская профильная смена проводится с использованием средств Гранта Президента Российской Федерации на развитие гражданского общества, предоставленного Фондом президентских грантов</p> 
       </div>
       </div>
-      </section>
+      </section> -->
       <section>
       <p class="main_p3">Партнеры конкурса</p>
         <div class="partners">
           <div class="part_right">
-          <img class="part_img" src="assets/img/file.png">
+          <img class="part_img" src="assets/img/rosmolodezh_logo.png">
           </div>
           <div class="part">
-          <img class="part_img" src="assets/img/Logo.png">
-          </div>
-          <div class="part">
-          <img class="part_img" src="assets/img/us2bEdMNyYQ.jpg">
+          <img class="part_img" src="assets/img/phoca_thumb_l_003.jpg">
           </div>
           <div class="part_left">
-          <img class="part_img" src="assets/img/JH1B3FsOjSY.jpg">
+          <img class="part_img" src="assets/img/Logo (1).png">
           </div>
         </div>
       </section>
@@ -192,18 +204,7 @@
           </div>
           </div>
             </div>
-            
-            <div class="col l4 m6 s12">
-          	 <div class="card">
-        	<div class="card-image">
-          	<img  class="org_img" src="assets/img/334.png">
-          	<span class="card-title text_span_org">Организатор</span>
-        	</div>
-        	<div class="card-content">
-          <p class="org_p">Яна Ковалева</p>
-          </div>
-          </div>
-            </div>
+          
                
             <div class="col l4 m6 s12">
           	 <div class="card">
@@ -229,29 +230,8 @@
           </div>
             </div>
             
-            <div class="col l4 m6 s12">
-          	 <div class="card">
-        	<div class="card-image">
-          	<img class="org_img" src="assets/img/5652.png">
-          	<span class="card-title text_span_org">Эксперт</span>
-        	</div>
-        	<div class="card-content">
-          <p class="org_p">Олег Мальсагов</p>
-          </div>
-          </div>
-            </div>
-            
-            <div class="col l4 m6 s12">
-          	 <div class="card">
-        	<div class="card-image">
-          	<img class="org_img" src="assets/img/5653.png">
-          	<span class="card-title text_span_org">Эксперт</span>
-        	</div>
-        	<div class="card-content">
-          <p class="org_p">Антон Коваленко</p>
-          </div>
-          </div>
-            </div>
+         
+          
             
           </div>
         </div>
@@ -286,7 +266,7 @@
       </div>
       </section>
       <section>
-      <p class="main_p3">Прими участие в "IT СМЕНЕ 2018"</p>
+      <p class="main_p3">Прими участие в "IT СМЕНЕ 2019"</p>
       <div class="uchas">
       <div class="t5800">
        <svg class="t580" style="fill:#000000;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 180"><path d="M54.1 109c-.8 0-1.6-.4-2-1.1-.8-1.1-.5-2.7.6-3.5 1.3-.9 6.8-4 11.6-6.6-15.9-1.3-29.2-8.3-38.5-20.2C8.9 56 8.5 24.1 13.2 3.4c.3-1.3 1.7-2.2 3-1.9 1.3.3 2.2 1.7 1.9 3-4.5 19.6-4.2 49.8 11.6 70 9 11.5 21.5 17.7 37.2 18.4l-1.8-2.3c-1.4-1.7-2.7-3.4-4.1-5.1-.7-.9-1.5-1.9-2.3-2.9-.9-1.1-.7-2.6.4-3.5 1.1-.9 2.6-.7 3.5.4 0 0 0 .1.1.1l6.4 7.9c.5.5.9 1.1 1.4 1.7 1.5 1.8 3.1 3.6 4.4 5.6 0 .1.1.1.1.2.1.3.2.5.3.8v.6c0 .2-.1.4-.2.6-.1.1-.1.3-.2.4-.1.2-.3.4-.5.6-.1.1-.3.2-.5.3-.1 0-.1.1-.2.1-1.2.6-16 8.6-18.1 10-.5.5-1 .6-1.5.6z"></path></svg> 

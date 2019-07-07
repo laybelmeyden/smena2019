@@ -1,23 +1,10 @@
-<!DOCTYPE html>
-<html lang="ru">
-  
-	<head>
-	  <title>{{ $titl or 'ИТ СМЕНА 2018' }}</title>
-  <!--meta-->
-  <meta charset="UTF-8">
-		<link rel="stylesheet" type="text/css" href="assets/css/normalize.css" />
-		<link rel="stylesheet" type="text/css" href="assets/css/demo.css" />
-		<link rel="stylesheet" type="text/css" href="assets/css/component.css" />
-		<link rel="stylesheet" type="text/css" href="assets/css/cs-select.css" />
-		<link rel="stylesheet" type="text/css" href="assets/css/cs-skin-boxes.css" />
-		
-		<script src="assets/js/modernizr.custom.js"></script>
-	</head>
-	<body>
+@extends('layouts.master')
+
+@section('content')
 		<div class="container">
 
 			<div class="fs-form-wrap" id="fs-form-wrap">
-			<form action="/form2" method="POST" class="fs-form fs-form-full" autocomplete="off">
+			<form action="/form2" method="POST" class="fs-form fs-form-full" autocomplete="off" enctype="multipart/form-data">
 				{{ csrf_field() }}
 					<ol class="fs-fields">
 					   <li>
@@ -62,39 +49,19 @@
 							<label class="fs-field-label fs-anim-upper lb2" for="q8">Приложение</label>
 							<label class="fs-field-label fs-anim-upper lb1" for="q8" style="font-size:12px;">- Указанная форма носит рекомендательный характер;
                 - отсутствие указанной формы в составе Заявки не является основанием отклонения Заявки</label>
-							<textarea class="fs-anim-lower" id="q8" name="p8"></textarea>
+							<!-- <input type="file" id="q8" name="p8" class="fs-anim-lower"> -->
 						</li>
 	
 					</ol>
+					<div class="col l12" style="    text-align: right;
+    padding-bottom: 40px;
+    padding-top: 30px;">
 					<button class="fs-submit" type="submit">Отправить</button>
+</div>
 				</form><!-- /fs-form -->	
 				
 			</div><!-- /fs-form-wrap -->
 
 		</div><!-- /container -->
-		<script src="assets/js/classie.js"></script>
-		<script src="assets/js/selectFx.js"></script>
-		<script src="assets/js/fullscreenForm.js"></script>
-		<script>
-			(function() {
-				var formWrap = document.getElementById( 'fs-form-wrap' );
-
-				[].slice.call( document.querySelectorAll( 'select.cs-select' ) ).forEach( function(el) {	
-					new SelectFx( el, {
-						stickyPlaceholder: false,
-						onChange: function(val){
-							document.querySelector('span.cs-placeholder').style.backgroundColor = val;
-						}
-					});
-				} );
-
-				new FForm( formWrap, {
-					onReview : function() {
-						classie.add( document.body, 'overview' ); // for demo purposes only
-					}
-				} );
-			})();
-		</script>
-	</body>
-</html>
+		@endsection
 

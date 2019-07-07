@@ -66,10 +66,23 @@ class MainController extends Controller
         
       return view('pages.uchat');
       }
-      
+      public function upload(Request $request)
+      {
+          // загрузка файла
+          if ($request->isMethod('post') && $request->file('p11')) {
+
+              $file = $request->file('p11');
+              $upload_folder = 'public/files_users';
+              $filename = $file->getClientOriginalName(); // image.jpg
+
+              Storage::putFileAs($upload_folder, $file, $filename);
+
+          }
+      }
       public function form1(Request $request)
       {
          $data= array(
+      'email' => request('email'),
       'p1' => request('p1'),
       'p2' => request('p2'),
       'p3' => request('p3'),
@@ -79,15 +92,14 @@ class MainController extends Controller
       'p7' => request('p7'),
       'p8' => request('p8'),
       'p9' => request('p9'),
-      'email' => request('email'),
       'p11' => request('p11'),
       );
-
-       \Mail::send('email.mail1', $data, function($message1) use ($data)
+      
+       \Mail::send('email.mail1', $data, function($message) use ($data)
     {
-        $mail_admin = env('MAIL_ADMIN_form1');
-        $message1->from($data['email'],$data['p1'],$data['p2'],$data['p3'],$data['p4'],$data['p5'],$data['p6'],$data['p7'],$data['p8'],$data['p9'],$data['p11']);
-        $message1->to($mail_admin, 'For Admin')->subject('Message from site');
+        $mail_admin = env('MAIL_USERNAME');
+        $message->from($data['email'],$data['p1'],$data['p2'],$data['p3'],$data['p4'],$data['p5'],$data['p6'],$data['p7'],$data['p8'],$data['p9'],$data['p11']);
+        $message->to($mail_admin, 'For Admin')->subject('Message from site');
      });
      
      Form::create(['name' => request('p1'),
@@ -133,8 +145,9 @@ class MainController extends Controller
       'p8' => request('p8'),
       );
        \Mail::send('email.mail2', $data, function($message1) use ($data)
+       
     {
-        $mail_admin = env('MAIL_ADMIN_form2');
+        $mail_admin = env('MAIL_USERNAME');
         $message1->from($data['email'],$data['p1'],$data['p2'],$data['p3'],$data['p4'],$data['p5'],$data['p6'],$data['p7'],$data['p8']);
         $message1->to($mail_admin, 'For Admin')->subject('Message from site');
      });

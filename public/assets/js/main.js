@@ -1,12 +1,12 @@
-$(document).ready(function(){
+$(document).ready(function() {
     $('.sidenav').sidenav();
     $('.parallax').parallax();
     $('.dropdown-trigger').dropdown();
     $('div.alert').delay(3000).slideUp(300);
-  	$('.collapsible').collapsible();
-  $('.modal').modal();
-  });
-  
+    $('.collapsible').collapsible();
+    $('.modal').modal();
+});
+
 
 // var slideNow = 1;
 // var slideCount = $('#slidewrapper').children().length;
@@ -83,46 +83,46 @@ $(document).ready(function(){
 // }
 
 function getTimeRemaining(endtime) {
-  var t = Date.parse(endtime) - Date.parse(new Date());
-  var seconds = Math.floor((t / 1000) % 60);
-  var minutes = Math.floor((t / 1000 / 60) % 60);
-  var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
-  var days = Math.floor(t / (1000 * 60 * 60 * 24));
-  return {
-    total: t,
-    days: days,
-    hours: hours,
-    minutes: minutes,
-    seconds: seconds
-  };
+    var t = Date.parse(endtime) - Date.parse(new Date());
+    var seconds = Math.floor((t / 1000) % 60);
+    var minutes = Math.floor((t / 1000 / 60) % 60);
+    var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
+    var days = Math.floor(t / (1000 * 60 * 60 * 24));
+    return {
+        total: t,
+        days: days,
+        hours: hours,
+        minutes: minutes,
+        seconds: seconds
+    };
 }
 
 function initializeClock(id, endtime) {
-  var clock = document.getElementById(id);
-  var daysSpan = clock.querySelector(".days");
-  var hoursSpan = clock.querySelector(".hours");
-  var minutesSpan = clock.querySelector(".minutes");
-  var secondsSpan = clock.querySelector(".seconds");
+    var clock = document.getElementById(id);
+    var daysSpan = clock.querySelector(".days");
+    var hoursSpan = clock.querySelector(".hours");
+    var minutesSpan = clock.querySelector(".minutes");
+    var secondsSpan = clock.querySelector(".seconds");
 
-  function updateClock() {
-    var t = getTimeRemaining(endtime);
+    function updateClock() {
+        var t = getTimeRemaining(endtime);
 
-    if (t.total <= 0) {
-      document.getElementById("clockdiv").className = "hidden";
-      document.getElementById("deadline-messadge").className = "visible";
-      clearInterval(timeinterval);
-      return true;
+        if (t.total <= 0) {
+            document.getElementById("clockdiv").className = "hidden";
+            document.getElementById("deadline-messadge").className = "visible";
+            clearInterval(timeinterval);
+            return true;
+        }
+
+        daysSpan.innerHTML = t.days;
+        hoursSpan.innerHTML = ("0" + t.hours).slice(-2);
+        minutesSpan.innerHTML = ("0" + t.minutes).slice(-2);
+        secondsSpan.innerHTML = ("0" + t.seconds).slice(-2);
     }
 
-    daysSpan.innerHTML = t.days;
-    hoursSpan.innerHTML = ("0" + t.hours).slice(-2);
-    minutesSpan.innerHTML = ("0" + t.minutes).slice(-2);
-    secondsSpan.innerHTML = ("0" + t.seconds).slice(-2);
-  }
-
-  updateClock();
-  var timeinterval = setInterval(updateClock, 1000);
+    updateClock();
+    var timeinterval = setInterval(updateClock, 1000);
 }
 
-var deadline = "November 26 2018 00:00:00 GMT+0300";
+var deadline = "November 23 2019 00:00:00 GMT+0300";
 initializeClock("clockdiv", deadline);

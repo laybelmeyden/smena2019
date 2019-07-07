@@ -40,7 +40,7 @@
 			        <li><a href="/">Главная</a></li>
 			        <li><a href="/ssoboy">Что взять с собой?</a></li>
 			        <li><a href="/photovideo">Фото/Видео</a></li>
-                    <li><a href="/rasp">Расписание</a></li>
+                    <!-- <li><a href="/rasp">Расписание</a></li> -->
                     <li><a href="/docs">Документы</a></li>
 			      </ul>
 			    </div>
@@ -49,7 +49,7 @@
                 <li><a href="/">Главная</a></li>
 			        <li><a href="/ssoboy">Что взять с собой?</a></li>
 			        <li><a href="/photovideo">Фото/Видео</a></li>
-                	<li><a href="/rasp">Расписание</a></li>
+                	<!-- <li><a href="/rasp">Расписание</a></li> -->
                 	<li><a href="/docs">Документы</a></li>
 			         @guest
             <li class="nav-item">

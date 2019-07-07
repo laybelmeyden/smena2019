@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('content')
-            <div class="container">
+            <div class="container" style="padding: 120px;">
                     <div class="row">
                     <div class="col l12 s12 m12">
                     <div class="login_form">
