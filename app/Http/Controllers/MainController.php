@@ -69,7 +69,7 @@ class MainController extends Controller
 
       public function form1(Request $request)
       {
-       
+      $path = $request -> file('app') -> store('filesupld');
 
       Form::create([
       'name' => request('name'),
