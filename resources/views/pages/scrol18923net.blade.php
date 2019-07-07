@@ -21,7 +21,8 @@
           <p>Наличие рекомендательного - {{ $form -> letter }}</p>
           <p>Телефон - {{ $form -> tel }}</p>
           <p>Почта - {{ $form -> email }}</p>
-          <p>Приложение - {{ $form -> app }}</p>
+          <p>Приложение - 
+          <a href="storage/{{ $form->app }}" class="oi">123</a>
          </div>
          </div>
             @endforeach 
