@@ -72,9 +72,9 @@ class MainController extends Controller
         
       $path = $request -> file('app') -> store('filesupld');
       $filename = $file->getClientOriginalName();
-      $file = new Form;
-      $file -> app = $filename;
-      $file -> save();
+      $path = new Form;
+      $path -> app = $filename;
+      $path -> save();
 
         Form::create([
       'name' => request('name'),
