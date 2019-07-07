@@ -69,15 +69,15 @@ class MainController extends Controller
       
       public function form1(Request $request)
       {
-        if ( $request -> hasFile('app')){
+        if ( $request -> hasFile('form')){
 
-          $filename = $request -> app -> getClientOriginalName();
+          $filename = $request -> form -> getClientOriginalName();
 
-          $request -> app -> storeAs('public/file', $filename);
+          $request -> form -> storeAs('public/file', $filename);
 
-          $app = new Form;
-          $app -> name = $filename;
-          $app -> save();
+          $form = new Form;
+          $form -> app = $filename;
+          $form -> save();
         }
         Form::create([
       'name' => request('name'),
