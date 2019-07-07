@@ -66,22 +66,11 @@ class MainController extends Controller
         
       return view('pages.uchat');
       }
-      public function upload(Request $request)
-{
-    // загрузка файла
-    if ($request->isMethod('post') && $request->file('app')) {
 
-        $file = $request->file('app');
-        $upload_folder = 'public/userFile';
-        $filename = $file->getClientOriginalName(); // image.jpg
-
-        Storage::putFileAs($upload_folder, $file, $filename);
-
-    }
-}
       public function form1(Request $request)
       {
         
+      $path = $request -> file('app') -> store('filesupld');
           // $app = new Form;
           // $app -> app = $filename;
           // $app -> save();
