@@ -93,7 +93,7 @@ class MainController extends Controller
       'letter' => request('letter'),
       'tel' => request('tel'),
       'email' => request('email'),
-      'app' => request('app')
+      'app' => request('app')-> store('public/upload')
       ]
       );
 
