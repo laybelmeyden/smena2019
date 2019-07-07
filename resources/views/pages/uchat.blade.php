@@ -13,7 +13,7 @@
 						</li>
 						<li>
 							<label class="fs-field-label fs-anim-upper" for="q1">Введите ФИО автора проекта</label>
-							<input class="input validate" name="p1" placeholder="Ивано Иван Иванович" required>
+							<input class="input validate" name="p1" placeholder="Иванов Иван Иванович" required>
 						</li>
 						<li>
 							<label class="fs-field-label fs-anim-upper" for="q2">Введите название проекта</label>

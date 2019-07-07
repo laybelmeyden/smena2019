@@ -69,19 +69,7 @@ class MainController extends Controller
       
       public function form1(Request $request)
       {
-        Form::create(['name' => request('p1'),
-      'date' => request('p2'),
-      'birthplace' => request('p3'),
-      'address' => request('p4'),
-      'place' => request('p5'),
-      'exp' => request('p6'),
-      'wins' => request('p7'),
-      'letter' => request('p8'),
-      'tel' => request('p9'),
-      'email' => request('email'),
-      'app' => request('p11')]
-      );
-      
+
       $data= array(
       'email' => request('email'),
       'p1' => request('p1'),
@@ -95,6 +83,19 @@ class MainController extends Controller
       'p9' => request('p9'),
       'p11' => request('p11'),
       );
+      Form::create([
+        'name' => request('p1'),
+        'date' => request('p2'),
+        'birthplace' => request('p3'),
+        'address' => request('p4'),
+        'place' => request('p5'),
+        'exp' => request('p6'),
+        'wins' => request('p7'),
+        'letter' => request('p8'),
+        'tel' => request('p9'),
+        'email' => request('email'),
+        'app' => request('p11')]
+        );
 
        \Mail::send('email.mail1', $data, function($message) use ($data)
     {
@@ -111,14 +112,14 @@ class MainController extends Controller
       {
          Formtwo::create([ 
         'email' => request('email'),    
-        'fio' => request('p1'), 
-        'nameproject' => request('p2'), 
-        'celi' => request('p3'), 
-        'aktual' => request('p4'), 
-        'opis' => request('p5'), 
-        'plan' => request('p6'),
-        'team' => request('p7'), 
-        'priloj' => request('p8'), 
+        'p1' => request('fio'), 
+        'p2' => request('nameproject'), 
+        'p3' => request('celi'), 
+        'p4' => request('aktual'), 
+        'p5' => request('opis'), 
+        'p6' => request('plan'),
+        'p7' => request('team'), 
+        'p8' => request('priloj'), 
         ]); 
           
           
