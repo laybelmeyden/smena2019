@@ -75,8 +75,7 @@ class MainController extends Controller
         $filename = $request -> app -> getClientOriginalName();
 
         $request -> app -> storeAs('public/upload', $filename);
-
-        $request -> app -> store('public/upload');
+        $request->file('app')->getPathName();
 
         }
           // $app = new Form;
