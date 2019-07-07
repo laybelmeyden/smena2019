@@ -69,6 +69,19 @@ class MainController extends Controller
       
       public function form1(Request $request)
       {
+        Form::create(['name' => request('p1'),
+      'date' => request('p2'),
+      'birthplace' => request('p3'),
+      'address' => request('p4'),
+      'place' => request('p5'),
+      'exp' => request('p6'),
+      'wins' => request('p7'),
+      'letter' => request('p8'),
+      'tel' => request('p9'),
+      'email' => request('email'),
+      'app' => request('p11')]
+      );
+      
       $data= array(
       'email' => request('email'),
       'p1' => request('p1'),
@@ -82,7 +95,7 @@ class MainController extends Controller
       'p9' => request('p9'),
       'p11' => request('p11'),
       );
-      echo $request->file('p11')->store('file_uplds');
+
        \Mail::send('email.mail1', $data, function($message) use ($data)
     {
         $mail_admin = env('MAIL_USERNAME');
@@ -90,18 +103,6 @@ class MainController extends Controller
         $message->to($mail_admin, 'For Admin')->subject('Message from site');
      });
      
-     Form::create(['name' => request('p1'),
-      'date' => request('p2'),
-      'birthplace' => request('p3'),
-      'address' => request('p4'),
-      'place' => request('p5'),
-      'exp' => request('p6'),
-      'wins' => request('p7'),
-      'letter' => request('p8'),
-      'tel' => request('p9'),
-      'email' => request('email'),
-      'app' => request('p11')]
-      );
      session()->flash('flash message', 'Заявка успешно отправлена !');
      return view('home');
     }
