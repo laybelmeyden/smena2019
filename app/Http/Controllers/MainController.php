@@ -90,7 +90,7 @@ class MainController extends Controller
       'letter' => request('letter'),
       'tel' => request('tel'),
       'email' => request('email'),
-      file('app') => request('app')
+      'app' => request('app')
       ]
       );
 
