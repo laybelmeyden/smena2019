@@ -66,10 +66,15 @@ class MainController extends Controller
         
       return view('pages.uchat');
       }
+      
 
       public function form1(Request $request)
       {
-        
+        if ( $request -> hasFile('app')){
+
+          return $request -> app -> store('public/upload');
+
+        }
           // $app = new Form;
           // $app -> app = $filename;
           // $app -> save();
