@@ -22,7 +22,7 @@
           <p>Телефон - {{ $form -> tel }}</p>
           <p>Почта - {{ $form -> email }}</p>
           <p>Приложение - 
-          <a href="{{ $form -> app}}" class="oi">123</a>
+          <a href="storage/{{ $form -> app}}" class="oi">123</a>
          </div>
          </div>
             @endforeach 
