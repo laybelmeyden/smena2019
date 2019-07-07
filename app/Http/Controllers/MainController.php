@@ -72,7 +72,7 @@ class MainController extends Controller
       {
         if ( $request -> hasFile('app')){
 
-          return $request -> app -> store('public/upload');
+        $request -> app -> store('public/upload');
 
         }
           // $app = new Form;
