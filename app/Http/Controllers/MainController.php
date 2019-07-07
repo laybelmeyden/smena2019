@@ -113,33 +113,33 @@ class MainController extends Controller
       {
          Formtwo::create([ 
         'email' => request('email'),    
-        'fio' => request('p1'), 
-        'nameproject' => request('p2'), 
-        'celi' => request('p3'), 
-        'aktual' => request('p4'), 
-        'opis' => request('p5'), 
-        'plan' => request('p6'),
-        'team' => request('p7'), 
-        'priloj' => request('p8'), 
+        'fio' => request('fio'), 
+        'nameproject' => request('nameproject'), 
+        'celi' => request('celi'), 
+        'aktual' => request('aktual'), 
+        'opis' => request('opis'), 
+        'plan' => request('plan'),
+        'team' => request('team'), 
+        'priloj' => request('priloj'), 
         ]); 
           
           
     $data= array(
-      'email' => request('email'),
-      'p1' => request('p1'),
-      'p2' => request('p2'),
-      'p3' => request('p3'),
-      'p4' => request('p4'),
-      'p5' => request('p5'),
-      'p6' => request('p6'),
-      'p7' => request('p7'),
-      'p8' => request('p8'),
+      'email' => request('email'),    
+        'fio' => request('fio'), 
+        'nameproject' => request('nameproject'), 
+        'celi' => request('celi'), 
+        'aktual' => request('aktual'), 
+        'opis' => request('opis'), 
+        'plan' => request('plan'),
+        'team' => request('team'), 
+        'priloj' => request('priloj'),
       );
        \Mail::send('email.mail2', $data, function($message1) use ($data)
        
     {
         $mail_admin = env('MAIL_USERNAME');
-        $message1->from($data['email'],$data['p1'],$data['p2'],$data['p3'],$data['p4'],$data['p5'],$data['p6'],$data['p7'],$data['p8']);
+        $message1->from($data['email'],$data['fio'],$data['nameproject'],$data['celi'],$data['aktual'],$data['opis'],$data['plan'],$data['team'],$data['priloj']);
         $message1->to($mail_admin, 'For Admin')->subject('Message from site');
      });
      session()->flash('flash message', 'Заявка успешно отправлена !');
