@@ -716,6 +716,10 @@ div#block1:after {
     display: none;
 }
 
+.docs_ul {
+    padding-top: 60px;
+}
+
 .fs-submit {
     background: transparent;
     border: 4px solid black;

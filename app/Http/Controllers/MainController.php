@@ -70,12 +70,6 @@ class MainController extends Controller
 
       public function form1(Request $request)
       {
-        if ( $request -> hasFile('app')){
-
-          
-          $request -> app -> store('public/upload');
-          
-        }
           // $app = new Form;
           // $app -> app = $filename;
           // $app -> save();
@@ -94,6 +88,12 @@ class MainController extends Controller
       'app' => request('app')-> store('upload')
       ]
       );
+      if ( $request -> hasFile('app')){
+
+          
+        $request -> app -> store('public/upload');
+        
+      }
 
       $data= array(
         'name' => request('name'),
@@ -133,6 +133,12 @@ class MainController extends Controller
         'team' => request('team'), 
         'priloj' => request('priloj'), 
         ]); 
+        if ( $request -> hasFile('priloj')){
+
+          
+          $request -> priloj -> store('public/upload');
+          
+        }
           
           
     $data= array(

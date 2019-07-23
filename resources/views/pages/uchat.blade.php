@@ -49,6 +49,7 @@
 							<label class="fs-field-label fs-anim-upper lb2" for="q8">Приложение</label>
 							<label class="fs-field-label fs-anim-upper lb1" for="q8" style="font-size:12px;">- Указанная форма носит рекомендательный характер;
                 - отсутствие указанной формы в составе Заявки не является основанием отклонения Заявки</label>
+							<br>
 							<input type="file" id="q8" name="priloj" class="fs-anim-lower">
 						</li>
 	
