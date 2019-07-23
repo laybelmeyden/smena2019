@@ -67,7 +67,16 @@ class MainController extends Controller
       return view('pages.uchat');
       }
       
+      public function store(Request $request){
 
+        if ( $request -> hasFile('app')){
+      
+          $request -> app -> store('public/upload');
+          
+        }
+        return back();
+      
+      }
       public function form1(Request $request)
       {
           // $app = new Form;
@@ -85,14 +94,9 @@ class MainController extends Controller
       'letter' => request('letter'),
       'tel' => request('tel'),
       'email' => request('email'),
-      'app' => request('app')-> store('upload')-> if ( null || $request -> hasFile('app')){
-      
-        $request -> app -> store('public/upload')
-        
-      },
+      'app' => request('app')-> store('upload'),
       ]
       );
-      
 
       $data= array(
         'name' => request('name'),
