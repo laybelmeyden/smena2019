@@ -41,7 +41,7 @@
           <p>план реализации прокета - {{ $formtwo -> plan }}</p>
           <p>команда прокета - {{ $formtwo -> team }}</p>
           <p>приложение - 
-          <a href="/storage/{{ $form -> priloj}}" class="oi">123</a></p>
+          <a href="/storage/{{ $formtwo -> priloj}}" class="oi">123</a></p>
 
          </div>
          </div>
