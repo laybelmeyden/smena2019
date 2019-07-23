@@ -69,11 +69,9 @@ class MainController extends Controller
       
       public function store(Request $request){
 
-        if ( $request -> hasFile('app')){
       
-          $request -> app -> store('public/upload');
+        $request -> app -> store('public/upload');
           
-        }
         return back();
       
       }
