@@ -50,7 +50,7 @@
 							<label class="fs-field-label fs-anim-upper lb1" for="q8" style="font-size:12px;">- Указанная форма носит рекомендательный характер;
                 - отсутствие указанной формы в составе Заявки не является основанием отклонения Заявки</label>
 							<br><br>
-							<input type="file" id="priloj" name="priloj" class="fs-anim-lower">
+							<input type="file" id="priloj" name="priloj" class="fs-anim-lower" value="no_file">
 						</li>
 	
 					</ol>

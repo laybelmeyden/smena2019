@@ -93,6 +93,7 @@ class MainController extends Controller
         $request -> app -> store('public/upload');
         
       }
+      
 
       $data= array(
         'name' => request('name'),

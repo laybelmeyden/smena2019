@@ -61,7 +61,7 @@
 
 - скан – копии дипломов победителя в Конкурсах и Олимпиадах;)</label>
 <br><br>
-							<input type="file" id="app" name="app" class="fs-anim-lower">
+							<input type="file" id="app" name="app" class="fs-anim-lower" value="no_file">
 						</li>
 					</ol>
 					<div class="col l12" style="    text-align: right;
