@@ -94,6 +94,9 @@ class MainController extends Controller
         $request -> app -> store('public/upload');
         
       }
+      else {
+        console.log('oops');
+      }
 
       $data= array(
         'name' => request('name'),
@@ -138,6 +141,9 @@ class MainController extends Controller
           
           $request -> priloj -> store('public/upload');
           
+        }
+        else {
+          console.log('oops');
         }
           
           
