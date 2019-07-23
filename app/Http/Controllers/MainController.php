@@ -137,6 +137,7 @@ class MainController extends Controller
     
     public function form2(Request $request)
       {
+        if ( $request -> hasFile('priloj')){
          Formtwo::create([ 
         'email' => request('email'),    
         'fio' => request('fio'), 
@@ -149,10 +150,21 @@ class MainController extends Controller
         'priloj' => request('priloj')-> store('upload2')
         ]); 
         
-        if ( $request -> hasFile('priloj')){
           
           $request -> priloj -> store('public/upload2');
           
+        } else {
+          Formtwo::create([ 
+            'email' => request('email'),    
+            'fio' => request('fio'), 
+            'nameproject' => request('nameproject'), 
+            'celi' => request('celi'), 
+            'aktual' => request('aktual'), 
+            'opis' => request('opis'), 
+            'plan' => request('plan'),
+            'team' => request('team'), 
+            'priloj' => request('priloj')
+            ]); 
         }
         
           
