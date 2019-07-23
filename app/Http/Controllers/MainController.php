@@ -73,6 +73,7 @@ class MainController extends Controller
           // $app = new Form;
           // $app -> app = $filename;
           // $app -> save();
+          if ( $request -> hasFile('app')){
 
       Form::create([
       'name' => request('name'),
@@ -88,7 +89,6 @@ class MainController extends Controller
       'app' => request('app')-> store('upload'),
       ]
       );
-      if ( $request -> hasFile('app')){
       
         $request -> app -> store('public/upload');
         
@@ -133,8 +133,8 @@ class MainController extends Controller
         'team' => request('team'), 
         'priloj' => request('priloj')-> store('upload2')
         ]); 
+        
         if ( $request -> hasFile('priloj')){
-
           
           $request -> priloj -> store('public/upload2');
           
