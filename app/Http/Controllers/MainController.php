@@ -85,7 +85,6 @@ class MainController extends Controller
       'letter' => request('letter'),
       'tel' => request('tel'),
       'email' => request('email'),
-      'app' => request('app')-> store('upload'),
       ]
       );
       if ( $request -> hasFile('app')){
