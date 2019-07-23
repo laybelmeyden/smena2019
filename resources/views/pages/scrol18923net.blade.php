@@ -22,7 +22,12 @@
           <p>Телефон - {{ $form -> tel }}</p>
           <p>Почта - {{ $form -> email }}</p>
           <p>Приложение - 
+          @if ($form['app'] === null)
+          нет файла
+          @endif
+          @if ($form['app'] !== null)
           <a href="/storage/{{ $form -> app}}" class="oi">123</a>
+          @endif
          </div>
          </div>
             @endforeach 
@@ -40,8 +45,14 @@
           <p>описание прокета - {{ $formtwo -> opis }}</p>
           <p>план реализации прокета - {{ $formtwo -> plan }}</p>
           <p>команда прокета - {{ $formtwo -> team }}</p>
-          <p>приложение - 
-          <a href="/storage/{{ $formtwo -> priloj}}" class="oi">123</a></p>
+          <p>приложение -
+          @if ($formtwo['priloj'] === null)
+          нет файла
+          @endif
+          @if ($formtwo['priloj'] !== null)
+          <a href="/storage/{{ $formtwo -> priloj}}" class="oi">123</a>
+          @endif
+            </p>
 
          </div>
          </div>
