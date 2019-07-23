@@ -85,17 +85,14 @@ class MainController extends Controller
       'letter' => request('letter'),
       'tel' => request('tel'),
       'email' => request('email'),
+      'app' => request('app')-> if ( $request -> hasFile('app')){
+      
+        $request -> app -> store('public/upload')
+        
+      },
       ]
       );
-      if ( $request -> hasFile('app')){
-        Form::create([
-
-          'app' => request('app')-> store('upload'),
-          ]
-          );
-        $request -> app -> store('public/upload');
-        
-      }
+      
 
       $data= array(
         'name' => request('name'),
