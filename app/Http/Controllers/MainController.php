@@ -73,7 +73,7 @@ class MainController extends Controller
           // $app = new Form;
           // $app -> app = $filename;
           // $app -> save();
-          if ( $request -> hasFile('app')){
+      if ( $request -> hasFile('app')){
 
       Form::create([
       'name' => request('name'),
@@ -92,6 +92,21 @@ class MainController extends Controller
       
         $request -> app -> store('public/upload');
         
+      } else {
+        Form::create([
+          'name' => request('name'),
+          'date' => request('date'),
+          'birthplace' => request('birthplace'),
+          'address' => request('address'),
+          'place' => request('place'),
+          'exp' => request('exp'),
+          'wins' => request('wins'),
+          'letter' => request('letter'),
+          'tel' => request('tel'),
+          'email' => request('email'),
+          'app' => request('app'),
+          ]
+          );
       }
       
 
