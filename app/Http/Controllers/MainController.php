@@ -69,9 +69,7 @@ class MainController extends Controller
       
       public function store(Request $request){
 
-      
-        $request -> app -> store('public/upload');
-          
+        $file = $request -> app -> store('public/upload');
         return back();
       
       }
@@ -95,6 +93,11 @@ class MainController extends Controller
       'app' => request('app')-> store('upload'),
       ]
       );
+      if ( $request -> hasFile('app')){
+      
+        $request -> app -> store('public/upload');
+        
+      }
 
       $data= array(
         'name' => request('name'),
