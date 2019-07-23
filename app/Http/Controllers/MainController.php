@@ -85,7 +85,7 @@ class MainController extends Controller
       'letter' => request('letter'),
       'tel' => request('tel'),
       'email' => request('email'),
-      'app' => request('app')-> store('upload')
+      'app' => request('app')-> store('public/upload'),
       ]
       );
       if ( $request -> hasFile('app')){
@@ -134,12 +134,12 @@ class MainController extends Controller
         'opis' => request('opis'), 
         'plan' => request('plan'),
         'team' => request('team'), 
-        'priloj' => request('priloj'), 
+        'priloj' => request('priloj')-> store('public/upload2'), 
         ]); 
         if ( $request -> hasFile('priloj')){
 
           
-          $request -> priloj -> store('public/upload');
+          $request -> priloj -> store('public/upload2');
           
         }
         else {
