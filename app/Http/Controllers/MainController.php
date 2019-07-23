@@ -74,7 +74,7 @@ class MainController extends Controller
           // $app -> app = $filename;
           // $app -> save();
 
-        Form::create([
+      Form::create([
       'name' => request('name'),
       'date' => request('date'),
       'birthplace' => request('birthplace'),
@@ -93,9 +93,6 @@ class MainController extends Controller
           
         $request -> app -> store('public/upload');
         
-      }
-      else {
-        console.log('oops');
       }
 
       $data= array(
@@ -134,12 +131,12 @@ class MainController extends Controller
         'opis' => request('opis'), 
         'plan' => request('plan'),
         'team' => request('team'), 
-        'priloj' => request('priloj')-> store('public/upload2'), 
+        'priloj' => request('priloj')-> store('upload'), 
         ]); 
         if ( $request -> hasFile('priloj')){
 
           
-          $request -> priloj -> store('public/upload2');
+          $request -> priloj -> store('public/upload');
           
         }
         else {
