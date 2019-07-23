@@ -40,7 +40,9 @@
           <p>описание прокета - {{ $formtwo -> opis }}</p>
           <p>план реализации прокета - {{ $formtwo -> plan }}</p>
           <p>команда прокета - {{ $formtwo -> team }}</p>
-          <p>приложение - {{ $formtwo -> priloj }}</p>
+          <p>приложение - 
+          <a href="/storage/{{ $form -> priloj}}" class="oi">123</a></p>
+
          </div>
          </div>
         @endforeach

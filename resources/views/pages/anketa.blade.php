@@ -60,8 +60,8 @@
 							<label class="fs-field-label fs-anim-upper lb1" for="q8" style="font-size:12px;">(- скан-копии сертификатов (иных документов) подтверждающих участие в Конкурсах, Олимпиадах по информационным технологиям, программированию, киберспорту;
 
 - скан – копии дипломов победителя в Конкурсах и Олимпиадах;)</label>
-							
-							<input type="file" id="app" name="app" class="fs-anim-lower" required>
+<br><br>
+							<input type="file" id="app" name="app" class="fs-anim-lower">
 						</li>
 					</ol>
 					<div class="col l12" style="    text-align: right;
