@@ -131,8 +131,8 @@ class MainController extends Controller
         $message->to($mail_admin, 'For Admin')->subject('Message from site');
      });
      
-     return view('home');
      session()->flash('flash message', 'Заявка успешно отправлена !');
+     return redirect('/');
     }
     
     public function form2(Request $request)
@@ -187,7 +187,7 @@ class MainController extends Controller
         $message1->from($data['email'],$data['fio'],$data['nameproject'],$data['celi'],$data['aktual'],$data['opis'],$data['plan'],$data['team'],$data['priloj']);
         $message1->to($mail_admin, 'For Admin')->subject('Message from site');
      });
-     return view('home');
      session()->flash('flash message', 'Заявка успешно отправлена !');
+     return redirect('/');
     }
 }
