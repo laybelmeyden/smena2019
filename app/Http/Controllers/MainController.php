@@ -126,13 +126,12 @@ class MainController extends Controller
 
        \Mail::send('email.mail1', $data, function($message) use ($data)
     {
-        $mail_admin = env('MAIL_USERNAME');
+        $mail_admin = env('MAIL_ADMIN_form1');
         $message->from($data['email'],$data['name'],$data['date'],$data['birthplace'],$data['address'],$data['place'],$data['exp'],$data['wins'],$data['letter'],$data['tel'],$data['app']);
         $message->to($mail_admin, 'For Admin')->subject('Message from site');
      });
      
-     session()->flash('flash message', 'Заявка успешно отправлена !');
-     return view('home');
+     return view('home')->flash('flash message', 'Заявка успешно отправлена !');;
     }
     
     public function form2(Request $request)
@@ -183,11 +182,10 @@ class MainController extends Controller
        \Mail::send('email.mail2', $data, function($message1) use ($data)
        
     {
-        $mail_admin = env('MAIL_USERNAME');
+        $mail_admin = env('MAIL_ADMIN_form2');
         $message1->from($data['email'],$data['fio'],$data['nameproject'],$data['celi'],$data['aktual'],$data['opis'],$data['plan'],$data['team'],$data['priloj']);
         $message1->to($mail_admin, 'For Admin')->subject('Message from site');
      });
-     session()->flash('flash message', 'Заявка успешно отправлена !');
-      return view('home');
+      return view('home')->flash('flash message', 'Заявка успешно отправлена !');;
     }
 }
