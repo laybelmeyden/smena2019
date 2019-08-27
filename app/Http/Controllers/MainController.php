@@ -132,7 +132,7 @@ class MainController extends Controller
      });
      
      session()->flash('flash message', 'Заявка успешно отправлена !');
-     return redirect('/');
+     return redirect('/home');
     }
     
     public function form2(Request $request)
@@ -188,6 +188,6 @@ class MainController extends Controller
         $message1->to($mail_admin, 'For Admin')->subject('Message from site');
      });
      session()->flash('flash message', 'Заявка успешно отправлена !');
-     return redirect('/');
+     return redirect('/home');
     }
 }
