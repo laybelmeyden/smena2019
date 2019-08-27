@@ -242,7 +242,7 @@
       <p class="pol_p">Скачать положение о конкурсе</p> 
       </div>
       <div class="pol_2">
-      <a class="btn_pol" href="https://vk.com/doc22052708_481464414?hash=cb60215b5e91cb6908&dl=a06c08f5b984992dc8">Скачать</a> 
+      <a class="btn_pol" href="https://vk.com/doc22052708_511538660?hash=e170b9a615d6272e15&dl=d17b482966fdf8b395">Скачать</a> 
       </div>
       </div>
       </section>
