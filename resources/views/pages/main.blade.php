@@ -154,40 +154,43 @@
       <section>
       <p class="main_p3">Партнеры конкурса</p>
         <div class="partners">
-          <div class="part_right">
-          <img class="part_img" src="assets/img/rosmolodezh_logo.png">
+        <div class="part">
+          <img class="part_img" src="assets/img/Logo(1).png">
           </div>
           <div class="part">
           <img class="part_img" src="assets/img/phoca_thumb_l_003.jpg">
           </div>
           <div class="part_left">
+          <img class="part_img" src="assets/img/part/11.png">
+          </div>
+          <div class="part_right">
+          <img class="part_img" src="assets/img/rosmolodezh_logo.png">
+          </div>
+          <div class="part_right">
           <img class="part_img" src="assets/img/part/1.png">
           </div>
-          <div class="part">
+          <div class="part_left">
           <img class="part_img" src="assets/img/part/2.png">
           </div>
           <div class="part">
           <img class="part_img" src="assets/img/part/4.png">
           </div>
-          <div class="part_left">
+          <div class="part_right">
           <img class="part_img" src="assets/img/part/6.png">
           </div>
-          <div class="part">
+          <div class="part_left">
           <img class="part_img" src="assets/img/part/7.png">
           </div>
           <div class="part">
           <img class="part_img" src="assets/img/part/9.png">
           </div>
-          <div class="part_left">
+          <div class="part_right">
           <img class="part_img" src="assets/img/part/10.png">
           </div>
-          <div class="part">
-          <img class="part_img" src="assets/img/part/11.png">
-          </div>
-          <div class="part">
+          <div class="part_left">
           <img class="part_img" src="assets/img/part/12.png">
           </div>
-          <div class="part_left">
+          <div class="part_right">
           <img class="part_img" src="assets/img/part/13.png">
           </div>
           <div class="part">
