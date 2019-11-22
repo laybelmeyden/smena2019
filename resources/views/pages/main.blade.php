@@ -161,7 +161,7 @@
           <img class="part_img" src="assets/img/phoca_thumb_l_003.jpg">
           </div>
           <div class="part_left">
-          <a href="https://roboshop.spb.ru/" target="_blank">
+          <a href="https://vk.cc/a3qkyP" target="_blank">
           <img class="part_img" src="assets/img/part/11.png">
           </a>
           </div>
