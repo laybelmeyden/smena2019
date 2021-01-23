@@ -8,6 +8,11 @@ use App\Formtwo;
 
 class MainController extends Controller
 {
+
+    public function config()
+    {
+      return view('pages.config');
+    }
     public function index()
     {
       return view('pages.main');
